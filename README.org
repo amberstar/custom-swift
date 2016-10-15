@@ -1,0 +1,57 @@
+#+TITLE: custom-swift layer
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../css/readtheorg.css" />
+
+#+CAPTION: logo
+
+# The maximum height of the logo should be 200 pixels.
+[[img/custom-swift.png]]
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Description][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+   - [[swift-repl-mode][swift-repl-mode]]
+
+* Description
+This is a customized swift-mode layer that adds support for Apple's Swift programming language with company code completion.
+
+It relies on the [[https://github.com/chrisbarrett/swift-mode][swift-mode]] major-mode* for Emacs 24.4 or later, to provide the
+following features:
+
+- Syntax highlighting
+- Indentation
+- Code navigation using ~imenu~ (built-in)
+- Automatic syntax checking with ~flycheck~ (available with the
+  ~syntax-checking~ layer)
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(auto-completion, custom-swift))
+#recommended:
+(defun dotspacemacs/user-config ()
+    (setq auto-completion-enable-snippets-in-popup t)
+)
+
+#+end_src
+
+* Key bindings
+
+| Key bindings | Description            |
+|--------------+------------------------|
+| ~SPC m s s~  | swift-mode-run-repl    |
+| ~SPC m s b~  | swift-mode-send-buffer |
+| ~SPC m s r~  | swift-mode-send-region |
+
+Notes:
+1. ~swift-mode-run-repl~ will run or switch to an existing REPL.
+2. To edit the command invocation, prefix with ~SPC u~ (or ~C-u~).
+3. Emacs key bindings in use are the those set by the package.
+
+** swift-repl-mode
+
+| Key bindings | Description                 |
+|--------------+-----------------------------|
+| ~SPC m s s~  | swift-repl-mode-switch-back |
