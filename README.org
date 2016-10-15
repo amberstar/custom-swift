@@ -20,6 +20,7 @@ following features:
 
 - Syntax highlighting
 - Indentation
+- Code completion
 - Code navigation using ~imenu~ (built-in)
 - Automatic syntax checking with ~flycheck~ (available with the
   ~syntax-checking~ layer)
@@ -30,11 +31,9 @@ To use this contribution add it to your =~/.spacemacs=
 
 #+begin_src emacs-lisp
   (setq-default dotspacemacs-configuration-layers '(auto-completion, custom-swift))
-#recommended:
-(defun dotspacemacs/user-config ()
-    (setq auto-completion-enable-snippets-in-popup t)
-)
 
+recommended:
+(defun dotspacemacs/user-config () (setq auto-completion-enable-snippets-in-popup t))
 #+end_src
 
 * Key bindings
