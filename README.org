@@ -30,7 +30,7 @@ To use this contribution add it to your =~/.spacemacs=
 
 
 #+begin_src emacs-lisp
-  (setq-default dotspacemacs-configuration-layers '(auto-completion, custom-swift))
+(setq-default dotspacemacs-configuration-layers '(auto-completion, custom-swift))
 
 recommended:
 (defun dotspacemacs/user-config () (setq auto-completion-enable-snippets-in-popup t))
