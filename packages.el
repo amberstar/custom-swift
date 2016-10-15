@@ -38,7 +38,6 @@
     )
   )
 
-
 ;;; packages.el ends here
 
  (when (configuration-layer/layer-usedp `auto-completion)
@@ -96,6 +95,3 @@ before activiting or switching to REPL."
           "ss"  'spacemacs/swift-repl-mode-switch-back)
         (define-key swift-repl-mode-map
           (kbd "C-c C-z") 'spacemacs/swift-repl-mode-switch-back)))))
-
-
-
